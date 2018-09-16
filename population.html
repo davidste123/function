@@ -1,0 +1,220 @@
+<span style="font-size: 18pt;"><strong><a href="https://findcaringarea.tk/">Home</a> &gt; Population prediction</strong></span>
+<h2><span style="font-size: 24pt;">First choose the Area you are interested in</span></h2>
+<table>
+<tbody>
+<tr>
+<td>
+<ul id="menu">
+ 	<li><button id="btn0" class="butto1" onclick=getvalue(this) value="Victoria">Victoria</button></li>
+ 	<li><button id="btn1" class="butto1" onclick=getvalue(this) value="Melbourne">Melbourne</button></li>
+ 	<li><button id="btn2" class="butto1" onclick=getvalue(this) value="Ballarat">Ballarat</button></li>
+ 	<li><button id="btn3" class="butto1" onclick=getvalue(this) value="Bendigo">Bendigo</button></li>
+ 	<li><button id="btn4" class="butto1" onclick=getvalue(this) value="Geelong">Geelong</button></li>
+ 	<li><button id="btn5" class="butto1" onclick=getvalue(this) value="Hume">Hume</button></li>
+ 	<li><button id="btn6" class="butto1" onclick=getvalue(this) value="Latrobe">Latrobe</button></li>
+ 	<li><button id="btn7" class="butto1" onclick=getvalue(this) value="NorthWest">NorthWest</button></li>
+ 	<li><button id="btn8" class="butto1" onclick=getvalue(this) value="Shepparton">Shepparton</button></li>
+ 	<li><button id="btn9" class="butto1" onclick=getvalue(this) value="Warrnambol">Warrnambol</button></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<h2><span style="font-size: 24pt;">Choose the age group</span></h2>
+<table>
+<tbody>
+<tr>
+<td>
+<ul id="menu">
+ 	<li><button id="Year0" class="button3" onclick=getvalue2(this) value="65-69">65-69</button></li>
+ 	<li><button id="Year1" class="button3" onclick=getvalue2(this) value="70-74">70-74</button></li>
+ 	<li><button id="Year2" class="button3" onclick=getvalue2(this) value="75-79">75-79</button></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="outer"><img id="resultpage" class="result" src="https://findcaringarea.tk/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-13.33.46.png" /></div>
+
+<script type="text/javascript">
+    function getvalue(btn){
+    var showbtn=btn.value;
+    console.log(showbtn);
+    if(showbtn=="Victoria"){
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Vic.png"; 
+		resultpage.value="Victoria";}
+    else if(showbtn=="Melbourne"){
+        resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Melbourne.png";
+		resultpage.value="Melbourne";
+    }
+    else if(showbtn=="Ballarat"){
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Ballarat.png";
+		resultpage.value="Ballarat";
+    }
+    else if(showbtn=="Bendigo"){
+        resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Bendigo.png";
+		resultpage.value="Bendigo";
+    }
+    else if(showbtn=="Geelong"){
+        resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Geelong.png";
+		resultpage.value="Geelong";
+    }
+    else if(showbtn=="Hume"){
+        resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Hume.png";
+		resultpage.value="Hume";
+    }
+    else if(showbtn=="Latrobe"){
+        resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Latrobe.png";
+		resultpage.value="Latrobe";
+    }
+    else if(showbtn=="NorthWest"){
+        resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/NorthWest.png";
+		resultpage.value="NorthWest";
+    }
+    else if(showbtn=="Shepparton"){
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Shepparton.png";
+		resultpage.value="Shepparton";
+    }
+    else{
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Warrnambool.png";
+		resultpage.value="Warrnambool";
+    }
+}
+    function showdetail(){
+        var shows=document.getElementById("moredetail");
+        shows.style.display="";
+    } 
+ function getvalue2(btn){
+    var showmore=btn.value;
+    var chartnow=document.getElementById("resultpage");
+    console.log(showmore);
+    console.log(chartnow.src);
+    var value1=chartnow.value;
+    console.log(chartnow.value);
+    if(showmore=="65-69"){
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/"+value1+"65-69"+".png";}
+    else if(showmore=="70-74"){
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/"+value1+"70-74"+".png";}
+    else{
+        resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/"+value1+"75-79"+".png";}
+    }
+function getvalue3(btn){
+    var showmore=btn.value;
+    var chartnow=document.getElementById("resultpage");
+    console.log(showmore);
+    var value1=chartnow.value;
+    console.log(chartnow.value);
+    if(showmore=="Male"){
+        resultpage2.src="https://findcaringarea.tk/wp-content/uploads/2018/09/"+value1+"Male"+".png";}
+    else if(showmore=="Female"){
+        resultpage2.src="https://findcaringarea.tk/wp-content/uploads/2018/09/"+value1+"Female"+".png";}
+    }
+
+
+<script>
+function expandPhoto(){
+    var overlay = document.createElement("div");
+    overlay.setAttribute("id","overlay");
+    overlay.setAttribute("class","overlay");
+    document.body.appendChild(overlay);
+    var img = document.createElement("img");
+    img.setAttribute("class","overlayimg");
+    img.src = this.getAttribute("src");
+    document.getElementById("overlay").appendChild(img);
+    img.onclick = restore;
+}
+function restore(){
+    document.body.removeChild(document.getElementById("overlay"));
+	document.body.removeChild(document.getElementById("img"));
+}
+window.onload = function(){
+    var imgs = document.getElementsByTagName("img");
+    imgs[0].focus();
+    for(var i = 0;i<imgs.length;i++){
+        imgs[i].onclick = expandPhoto;
+        imgs[i].onkeydown = expandPhoto;
+    }
+ 
+}</script>
+
+<style>
+#menu { 
+ font:12px verdana, arial, sans-serif; 
+}
+#menu, #menu li {
+ list-style:none;
+ padding:10PX;
+ margin:0;
+}
+#menu li { 
+ float:left; 
+}
+#menu li a {
+ display:block;
+ padding:8px 50px;
+ background:#3A4953;
+ color:#fff;
+ text-decoration:none;
+ border-right:1px solid #000;
+}
+#menu li a:hover {
+ background:#146C9C;
+ color:#fff;
+ text-decoration:none;
+ border-right:1px solid #000;
+}
+#menu li a.last {
+ border-right:0; 
+}
+    #result{
+	padding:10px;width:100%;height:auto;}
+    #outer{
+        width:80%;
+        height:80%;
+    }
+    .overlay{
+        background-color:#000;
+        filter:alpha(opacity=70);
+        position: fixed;
+        top:0;
+	    left:0;
+        width:70%;
+        height:50%;
+        z-index: 10;
+        margin-left:+200px;
+	    margin-top:+100px;
+    }
+    .overlayimg{
+        position: absolute;
+        z-index: 0;
+	    
+        width:100%;
+    }
+ .button2 {
+        background-color: #555555;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+	font-size: 30px;}
+ .butto1 {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 15px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+	font-size: 20px;}
+.button3 {
+        background-color: orange;
+        border: none;
+        color: white;
+        padding: 15px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+	font-size: 20px;}
+<style>

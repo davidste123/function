@@ -1,3 +1,27 @@
+<strong><span style="font-family: 'times new roman', times, serif; font-size: 18pt;"><a href="https://findcaringarea.tk/">Home</a> &gt; Population prediction</span></strong>
+<h3><img src="https://findcaringarea.tk/wp-content/uploads/2018/09/line-chart-300x300.png" alt="" width="48" height="48" class="wp-image-304 alignleft" /></h3>
+<span style="font-size: 24pt;"><strong>Future Elderly Population</strong></span>
+<?php global $wpdb;
+$getage = $wpdb->get_results("SELECT * FROM `Population2` WHERE `Age`='65-69';");
+$getage2 = $wpdb->get_results("SELECT * FROM `Population2` WHERE `Age`='70-74';");
+$getage3 = $wpdb->get_results("SELECT * FROM `Population2` WHERE `Age`='75-79';");
+?>
+ <script>
+  var labels=<?php echo json_encode($getage,JSON_PRETTY_PRINT)?>;
+  var label2=<?php echo json_encode($getage2,JSON_PRETTY_PRINT)?>;
+  var label3=<?php echo json_encode($getage3,JSON_PRETTY_PRINT)?>;
+</script>
+
+<?php global $wpdb;
+$getarea = $wpdb->get_results("SELECT * FROM `Areapopulation` WHERE `Agegroup`='65-69';");
+$getarea2 = $wpdb->get_results("SELECT * FROM `Areapopulation` WHERE `Agegroup`='70-74';");
+$getarea3 = $wpdb->get_results("SELECT * FROM `Areapopulation` WHERE `Agegroup`='75-79';");
+?>
+ <script>
+  var areadata=<?php echo json_encode($getarea,JSON_PRETTY_PRINT)?>;
+ var areadata2=<?php echo json_encode($getarea2,JSON_PRETTY_PRINT)?>;
+ var areadata3=<?php echo json_encode($getarea3,JSON_PRETTY_PRINT)?>;
+	console.log(areadata);
 </script>
 
 &nbsp;
