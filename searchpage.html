@@ -1,0 +1,75 @@
+<!-- these are the title of the page hyper link is include for the path -->
+<span style="font-size: 18pt;"><strong><a href="https://findcaringarea.tk/">Home</a> &gt; Decide To Move?</strong></span>
+<h2 style="text-align: center;">Easier Life.</h2>
+<h2 style="text-align: center;">In more and more Support.</h2>
+<h3>The filter allows you to find the areas with most help and activities.</h3>
+
+<!-- this is the method for getting userinput and creates the table for the category-->
+<!--please check the image-size to ensure the image is fit for the website -->
+
+<form method="get" name="getcategoryinfo">
+<table style="height: 286px;" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 20px;">
+<td style="width: 245px; height: 94px; text-align: center;">
+<h2 style="text-align: center;"><strong>Hospital</strong></h2>
+</td>
+<td style="width: 239px; height: 94px; text-align: center;">
+<h2 style="text-align: center;"><strong>Recreation Facilities</strong></h2>
+</td>
+<td style="width: 244px; height: 94px; text-align: center;">
+<h2 style="text-align: center;"><strong>Library</strong></h2>
+</td>
+</tr>
+<tr>
+<td style="width: 245px; height: 172px; text-align: center;"><input id="myCheckboxHospital" style="display: none;" name="cate[]" type="checkbox" value="hospital" onclick="checkclick()"/>
+<label for="myCheckboxHospital"><img id="change1" src="https://findcaringarea.tk/wp-content/uploads/2018/09/hospital.-1png.png" alt="" width="145" height="145" /></label></td>
+<td style="width: 239px; height: 172px; text-align: center;"><input id="myCheckboxSportCentre" style="display: none;" name="cate[]" type="checkbox" value="sport center"  onclick="checkclick2()"/>
+<label for="myCheckboxSportCentre"><img id="change2" src="https://findcaringarea.tk/wp-content/uploads/2018/09/sport-centre.png" alt="" width="163" height="163" />
+</label></td>
+<td style="width: 244px; height: 172px; text-align: center;"><input id="myCheckboxLibrary" style="display: none;" name="cate[]" type="checkbox" value="library" onclick="checkclick1()"/>
+<label for="myCheckboxLibrary"><img id="change3" src="https://findcaringarea.tk/wp-content/uploads/2018/09/open-book-1.png" alt="" width="147" height="147" />
+</label></td>
+</tr>
+</tbody>
+</table>
+<input name="submit_filter" type="submit" value="Submit Filter" />
+
+</form>
+<!-- php code for getting searching result, check description according by php_snippet id 298 -->
+
+[wbcr_php_snippet id="298"]
+
+<script type="text/javascript">
+	window.history.pushState({}, "Hide", "https://findcaringarea.tk/index.php/hospitallist/");
+
+
+
+	function checkclick(){
+if(myCheckboxHospital.checked==true){
+change1.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-15.04.40.png";
+}
+else
+{change1.src='https://findcaringarea.tk/wp-content/uploads/2018/09/hospital.-1png.png';}
+}
+function checkclick1(){
+if(myCheckboxLibrary.checked==true){
+    change3.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-15.05.04.png";
+}
+else{change3.src="http://findcaringarea.tk/wp-content/uploads/2018/09/open-book-1.png";}
+}
+function checkclick2(){
+    if(myCheckboxSportCentre.checked==true){
+        change2.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Screen-Shot-2018-09-11-at-15.08.00.png";
+}
+else{
+    change2.src="http://findcaringarea.tk/wp-content/uploads/2018/09/sport-centre.png";}
+}
+
+</script>
+
+<style type="text/css">
+	page-id-299 header section-inner{
+display: none;
+}
+</style>

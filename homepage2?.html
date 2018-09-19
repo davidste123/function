@@ -1,0 +1,105 @@
+<style type="text/css">
+	.tab-div{
+		width: 1800px;
+		position: relative;
+	}
+	ul {
+		list-style: none;
+	}
+	.tab {
+		width: 33.3%;
+                height:40px
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		z-index: 2;
+		font-size:30px;
+                font-weight:bold
+	}
+	.tab li{
+		float: left;
+		width: 30%;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid #DDD;
+		border-bottom: 0;
+		margin-left: 10px;
+		background: #fff;
+		cursor: pointer;
+       }
+    .tab-content {
+      width: 800px;
+      height: 200px;
+      border: 1px solid #DDD;
+      border-top: 3px solid #e4393c;
+      text-align: center;
+      position: absolute;
+      top: 31px;
+      left: 0;
+  }
+  	.tab-content ul{
+  		margin: 0;
+  		padding: 10px;
+  	}
+  	.tab-content li{
+  		padding: 10px;
+  	}
+  	.tab .table-active{
+  	border-top: 3px solid #e4393c;
+  	border-bottom: 3px solid #fff;
+  	}
+  	.tab-content-hide{
+  		display: none;
+  	}
+  	.tab-content-show{
+  		display: block;
+  	}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		var tabList=document.getElementById("tab-list");
+		var aLis=tabList.getElementsByTagName("li");
+		var div1=document.getElementById("Test1");
+		var content=div1.getElementsByTagName("div");
+		for(var i=0; i<aLis.length; i++){
+			aLis[i].index=i;
+			aLis[i].onclick=function(){
+				for(var j=0;j<aLis.length;j++){
+					aLis[j].className='';
+				}
+				this.className="table-active";
+
+				for(var j=0;j<content.length;j++){
+					content[j].className="tab-content tab-content-hide";
+				}
+				content[this.index].className="tab-content tab-content-show";
+			}
+		}}
+</script>
+
+<div id="Test1" class='tab-div'>
+	<ul id="tab-list" class="tab">
+		<li class='table-active'>Hospital</li>
+		<li>Library</li>
+		<li>Sport Centre</li>
+	</ul>
+<div class="tab-content tab-content-show">
+	<ul>
+		<li>first page</li>
+	</ul>
+</div>
+
+<div class="tab-content tab-content-hide">
+	<ul>
+		<li>second page</li>
+	</ul>
+</div>
+
+<div class="tab-content tab-content-hide">
+	<ul>
+		<li>third page</li>
+	</ul>
+</div>
+</div>

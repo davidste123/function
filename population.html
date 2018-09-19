@@ -5,16 +5,15 @@
 <tr>
 <td>
 <ul id="menu">
- 	<li><button id="btn0" class="butto1" onclick=getvalue(this) value="Victoria">Victoria</button></li>
- 	<li><button id="btn1" class="butto1" onclick=getvalue(this) value="Melbourne">Melbourne</button></li>
- 	<li><button id="btn2" class="butto1" onclick=getvalue(this) value="Ballarat">Ballarat</button></li>
- 	<li><button id="btn3" class="butto1" onclick=getvalue(this) value="Bendigo">Bendigo</button></li>
- 	<li><button id="btn4" class="butto1" onclick=getvalue(this) value="Geelong">Geelong</button></li>
- 	<li><button id="btn5" class="butto1" onclick=getvalue(this) value="Hume">Hume</button></li>
- 	<li><button id="btn6" class="butto1" onclick=getvalue(this) value="Latrobe">Latrobe</button></li>
- 	<li><button id="btn7" class="butto1" onclick=getvalue(this) value="NorthWest">NorthWest</button></li>
- 	<li><button id="btn8" class="butto1" onclick=getvalue(this) value="Shepparton">Shepparton</button></li>
- 	<li><button id="btn9" class="butto1" onclick=getvalue(this) value="Warrnambol">Warrnambol</button></li>
+    <li><button id="btn1" class="butto1" onclick=getvalue(this) value="Melbourne">Melbourne</button></li>
+    <li><button id="btn2" class="butto1" onclick=getvalue(this) value="Ballarat">Ballarat</button></li>
+    <li><button id="btn3" class="butto1" onclick=getvalue(this) value="Bendigo">Bendigo</button></li>
+    <li><button id="btn4" class="butto1" onclick=getvalue(this) value="Geelong">Geelong</button></li>
+    <li><button id="btn5" class="butto1" onclick=getvalue(this) value="Hume">Hume</button></li>
+    <li><button id="btn6" class="butto1" onclick=getvalue(this) value="Latrobe">Latrobe</button></li>
+    <li><button id="btn7" class="butto1" onclick=getvalue(this) value="NorthWest">NorthWest</button></li>
+    <li><button id="btn8" class="butto1" onclick=getvalue(this) value="Shepparton">Shepparton</button></li>
+    <li><button id="btn9" class="butto1" onclick=getvalue(this) value="Warrnambol">Warrnambol</button></li>
 </ul>
 </td>
 </tr>
@@ -26,58 +25,59 @@
 <tr>
 <td>
 <ul id="menu">
- 	<li><button id="Year0" class="button3" onclick=getvalue2(this) value="65-69">65-69</button></li>
- 	<li><button id="Year1" class="button3" onclick=getvalue2(this) value="70-74">70-74</button></li>
- 	<li><button id="Year2" class="button3" onclick=getvalue2(this) value="75-79">75-79</button></li>
+    <li><button id="Year0" class="button3" onclick=getvalue2(this) value="65-69">65-69</button></li>
+    <li><button id="Year1" class="button3" onclick=getvalue2(this) value="70-74">70-74</button></li>
+    <li><button id="Year2" class="button3" onclick=getvalue2(this) value="75-79">75-79</button></li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 <div id="outer"><img id="resultpage" class="result" src="https://findcaringarea.tk/wp-content/uploads/2018/09/Screen-Shot-2018-09-16-at-13.33.46.png" /></div>
+<h2>Click the picture to zoom in<h2>
 
 <script type="text/javascript">
-    function getvalue(btn){
+      function getvalue(btn){
     var showbtn=btn.value;
     console.log(showbtn);
     if(showbtn=="Victoria"){
         resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Vic.png"; 
-		resultpage.value="Victoria";}
+        resultpage.value="Victoria";}
     else if(showbtn=="Melbourne"){
         resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Melbourne.png";
-		resultpage.value="Melbourne";
+        resultpage.value="Melbourne";
     }
     else if(showbtn=="Ballarat"){
         resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Ballarat.png";
-		resultpage.value="Ballarat";
+        resultpage.value="Ballarat";
     }
     else if(showbtn=="Bendigo"){
         resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Bendigo.png";
-		resultpage.value="Bendigo";
+        resultpage.value="Bendigo";
     }
     else if(showbtn=="Geelong"){
         resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Geelong.png";
-		resultpage.value="Geelong";
+        resultpage.value="Geelong";
     }
     else if(showbtn=="Hume"){
         resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Hume.png";
-		resultpage.value="Hume";
+        resultpage.value="Hume";
     }
     else if(showbtn=="Latrobe"){
         resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/Latrobe.png";
-		resultpage.value="Latrobe";
+        resultpage.value="Latrobe";
     }
     else if(showbtn=="NorthWest"){
         resultpage.src="http://findcaringarea.tk/wp-content/uploads/2018/09/NorthWest.png";
-		resultpage.value="NorthWest";
+        resultpage.value="NorthWest";
     }
     else if(showbtn=="Shepparton"){
         resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Shepparton.png";
-		resultpage.value="Shepparton";
+        resultpage.value="Shepparton";
     }
     else{
         resultpage.src="https://findcaringarea.tk/wp-content/uploads/2018/09/Warrnambool.png";
-		resultpage.value="Warrnambool";
+        resultpage.value="Warrnambool";
     }
 }
     function showdetail(){
@@ -109,10 +109,10 @@ function getvalue3(btn){
     else if(showmore=="Female"){
         resultpage2.src="https://findcaringarea.tk/wp-content/uploads/2018/09/"+value1+"Female"+".png";}
     }
+</script>
 
-
-<script>
-function expandPhoto(){
+<script type="text/javascript">
+    function expandPhoto(){
     var overlay = document.createElement("div");
     overlay.setAttribute("id","overlay");
     overlay.setAttribute("class","overlay");
@@ -125,7 +125,7 @@ function expandPhoto(){
 }
 function restore(){
     document.body.removeChild(document.getElementById("overlay"));
-	document.body.removeChild(document.getElementById("img"));
+    document.body.removeChild(document.getElementById("img"));
 }
 window.onload = function(){
     var imgs = document.getElementsByTagName("img");
@@ -135,10 +135,11 @@ window.onload = function(){
         imgs[i].onkeydown = expandPhoto;
     }
  
-}</script>
+}
+</script>
 
-<style>
-#menu { 
+<style type="text/css">
+    #menu { 
  font:12px verdana, arial, sans-serif; 
 }
 #menu, #menu li {
@@ -167,7 +168,7 @@ window.onload = function(){
  border-right:0; 
 }
     #result{
-	padding:10px;width:100%;height:auto;}
+    padding:10px;width:100%;height:auto;}
     #outer{
         width:80%;
         height:80%;
@@ -177,17 +178,16 @@ window.onload = function(){
         filter:alpha(opacity=70);
         position: fixed;
         top:0;
-	    left:0;
-        width:70%;
+        left:0;
+        width:60%;
         height:50%;
         z-index: 10;
-        margin-left:+200px;
-	    margin-top:+100px;
+        margin-left:+180px;
+        margin-top:+100px;
     }
     .overlayimg{
         position: absolute;
         z-index: 0;
-	    
         width:100%;
     }
  .button2 {
@@ -198,7 +198,7 @@ window.onload = function(){
         text-align: center;
         text-decoration: none;
         display: inline-block;
-	font-size: 30px;}
+    font-size: 30px;}
  .butto1 {
         background-color: orange;
         border: none;
@@ -207,7 +207,7 @@ window.onload = function(){
         text-align: center;
         text-decoration: none;
         display: inline-block;
-	font-size: 20px;}
+    font-size: 20px;}
 .button3 {
         background-color: orange;
         border: none;
@@ -216,5 +216,5 @@ window.onload = function(){
         text-align: center;
         text-decoration: none;
         display: inline-block;
-	font-size: 20px;}
-<style>
+    font-size: 20px;}
+</style>
