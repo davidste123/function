@@ -1,0 +1,37 @@
+global $wpdb;
+$getsuburbList = $wpdb->get_results("select DISTINCT suburb from(select suburb from hospital_detail UNION SELECT Suburb_Town from library UNION select suburbTown FROM recreation) as t ORDER BY `t`.`suburb` ASC");
+global $wpdb;
+$getsuburbList1 = $wpdb->get_results("select DISTINCT suburb from(select suburb from hospital_detail UNION SELECT Suburb_Town from library UNION select suburbTown FROM recreation) as t ORDER BY `t`.`suburb` ASC");
+?>
+<table id="dropOne"><tr><td>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Select Suburb One</button>
+<div id="myDropdown" class="dropdown-content">
+<input type="text" placeholder="Search suburb" id="myInput" onkeyup="filterFunction()" class="searchClass">
+<?php
+	foreach($getsuburbList as $getsuburbList){
+      $result = $getsuburbList->suburb;
+      echo "<div><a href=\"#jumpOne\" id=\"$result\" onclick=\"mySuburb(this.id)\" value=\"$result\">$getsuburbList->suburb</a></div>";
+}
+?>
+</div>
+</div>
+</td>
+<td>
+<div class="dropdown1">
+<button onclick="myFunction1()" class="dropbtn1">Select Suburb Two</button>
+  <div id="myDropdown1" class="dropdown-content1">
+    <input type="text" placeholder="Search suburb" id="myInput1" onkeyup="filterFunction1()">
+<?php
+	foreach($getsuburbList1 as $getsuburbList1){
+            $result1 = $getsuburbList1->suburb;
+  		echo "<div><a href=\"#jumpOne\" id=\"$getsuburbList1->suburb\" onclick=\"mySuburb1(this.id)\" value=\"$result1\">$getsuburbList1->suburb</a></div>";
+}
+?>
+</div>  
+</div>
+</td>
+</tr>
+</table>
+<br>
+  <br>

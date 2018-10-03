@@ -1,0 +1,11 @@
+global $wpdb;
+$getarea = $wpdb->get_results("SELECT * FROM `Areapopulation` WHERE `Agegroup`='65-69';");
+$getarea2 = $wpdb->get_results("SELECT * FROM `Areapopulation` WHERE `Agegroup`='70-74';");
+$getarea3 = $wpdb->get_results("SELECT * FROM `Areapopulation` WHERE `Agegroup`='75-79';");
+?>
+ <script>
+  var areadata=<?php echo json_encode($getarea,JSON_PRETTY_PRINT)?>;
+ var areadata2=<?php echo json_encode($getarea2,JSON_PRETTY_PRINT)?>;
+ var areadata3=<?php echo json_encode($getarea3,JSON_PRETTY_PRINT)?>;
+	console.log(areadata);
+</script>
